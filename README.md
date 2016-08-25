@@ -1,7 +1,7 @@
-![](https://img.shields.io/docker/stars/redwyvern/jenkins-ubuntu-slave-base.svg)
-![](https://img.shields.io/docker/pulls/redwyvern/jenkins-ubuntu-slave-base.svg)
-![](https://img.shields.io/docker/automated/redwyvern/jenkins-ubuntu-slave-base.svg)
-[![](https://images.microbadger.com/badges/image/redwyvern/jenkins-ubuntu-slave-base.svg)](https://microbadger.com/images/redwyvern/jenkins-ubuntu-slave-base "Get your own image badge on microbadger.com")
+![](https://img.shields.io/docker/stars/redwyvern/jenkins-ubuntu-slave.svg)
+![](https://img.shields.io/docker/pulls/redwyvern/jenkins-ubuntu-slave.svg)
+![](https://img.shields.io/docker/automated/redwyvern/jenkins-ubuntu-slave.svg)
+[![](https://images.microbadger.com/badges/image/redwyvern/jenkins-ubuntu-slave.svg)](https://microbadger.com/images/redwyvern/jenkins-ubuntu-slave "Get your own image badge on microbadger.com")
 
 Redwyvern Jenkins - Ubuntu Slave 
 ================================
