@@ -5,8 +5,7 @@ ARG GIT_USER=Jenkins
 ARG GIT_EMAIL=jenkins@weedon.org.au
 
 # Set user jenkins to the image
-RUN useradd -m -d /home/jenkins -s /bin/bash jenkins &&\
-    echo "jenkins:jenkins" | chpasswd
+RUN useradd -m -d /home/jenkins -s /bin/bash jenkins
 
 USER jenkins
 COPY authorized_keys /home/jenkins/.ssh/authorized_keys
