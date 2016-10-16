@@ -19,7 +19,9 @@ USER root
 COPY ./usr /usr
 COPY settings.xml /home/jenkins/.m2/settings.xml
 
-RUN chown -R jenkins.jenkins /home/jenkins
+# Sencha permissions need to allow the jenkins user to execute binaries such as phantomjs for building
+RUN 	chown -R jenkins.jenkins /home/jenkins && \
+	chown -R jenkins.jenkins /opt/Sencha
 
 # Standard SSH port
 EXPOSE 22
