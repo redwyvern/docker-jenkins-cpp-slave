@@ -23,6 +23,11 @@ COPY settings.xml /home/jenkins/.m2/settings.xml
 RUN 	chown -R jenkins.jenkins /home/jenkins && \
 	chown -R jenkins.jenkins /opt/Sencha
 
+RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommends \
+    fakeroot && \
+    apt-get -q autoremove && \
+    apt-get -q clean -y && rm -rf /var/lib/apt/lists/* && rm -f /var/cache/apt/*.bin
+
 # Standard SSH port
 EXPOSE 22
 
