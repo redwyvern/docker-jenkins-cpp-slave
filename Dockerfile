@@ -25,6 +25,7 @@ RUN 	chown -R jenkins.jenkins /home/jenkins && \
 
 RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommends \
     debhelper \
+    devscripts \
     fakeroot && \
     apt-get -q autoremove && \
     apt-get -q clean -y && rm -rf /var/lib/apt/lists/* && rm -f /var/cache/apt/*.bin
