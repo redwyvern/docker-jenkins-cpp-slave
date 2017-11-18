@@ -18,4 +18,20 @@ This slave contains software to build the following type of projects:
 
 Once a container from this image is running it is ready run as a Jenkins slave without further configuration.
 
-Included is a run.sh shell script that will start the container.
+Example YAML file:
+```
+version: '3'
+
+services:
+  ubuntu-slave:
+    image:  docker.artifactory.weedon.org.au/redwyvern/jenkins-ubuntu-slave
+    container_name: ubuntu-slave
+    hostname: ubuntu-slave
+    restart: always
+    dns: 192.168.1.50
+    networks:
+      - dev_nw
+
+networks:
+  dev_nw:
+```
