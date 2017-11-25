@@ -24,7 +24,7 @@ version: '3'
 
 services:
   ubuntu-slave:
-    image:  docker.artifactory.weedon.org.au/redwyvern/jenkins-ubuntu-slave
+    image:  docker.artifactory.weedon.org.au/redwyvern/jenkins-cpp-slave
     container_name: ubuntu-slave
     hostname: ubuntu-slave
     restart: always
