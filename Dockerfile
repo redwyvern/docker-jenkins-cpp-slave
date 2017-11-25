@@ -23,9 +23,6 @@ RUN git config --global user.name "${GIT_USER}" && \
 
 USER root
 
-COPY ./usr /usr
-COPY settings.xml /home/jenkins/.m2/settings.xml
-
 # Sencha permissions need to allow the jenkins user to execute binaries such as phantomjs for building
 RUN 	chown -R jenkins.jenkins /home/jenkins
 
