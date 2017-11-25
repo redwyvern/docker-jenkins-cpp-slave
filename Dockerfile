@@ -24,6 +24,7 @@ RUN 	chown -R jenkins.jenkins /home/jenkins && \
 	chown -R jenkins.jenkins /opt/Sencha
 
 RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommends \
+    git \
     debhelper \
     devscripts \
     fakeroot && \
