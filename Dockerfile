@@ -18,7 +18,6 @@ RUN useradd -m -d /home/jenkins -s /bin/bash jenkins
 USER jenkins
 COPY authorized_keys /home/jenkins/.ssh/authorized_keys
 
-
 RUN git config --global user.name "${GIT_USER}" && \
     git config --global user.email "${GIT_EMAIL}"
 
@@ -28,8 +27,7 @@ COPY ./usr /usr
 COPY settings.xml /home/jenkins/.m2/settings.xml
 
 # Sencha permissions need to allow the jenkins user to execute binaries such as phantomjs for building
-RUN 	chown -R jenkins.jenkins /home/jenkins && \
-	chown -R jenkins.jenkins /opt/Sencha
+RUN 	chown -R jenkins.jenkins /home/jenkins
 
 # Standard SSH port
 EXPOSE 22
